@@ -25,9 +25,9 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.responses
             int code
         )
         {
-            data = Data;
-            menssagem = Menssagem;
-            code = Code;
+            Data = data;
+            Menssagem = menssagem;
+            Code = code;
         }
 
 
