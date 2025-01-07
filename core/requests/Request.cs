@@ -7,6 +7,6 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.requests
 {
     public abstract class Request
     {
-        public string UserId { get; set; } = string.Empty;
+        public int UsuarioId { get; set; }
     }
 }

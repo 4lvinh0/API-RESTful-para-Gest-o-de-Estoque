@@ -21,8 +21,5 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.requests.TarefaRequest
         public DateOnly? DataVencimento { get; set; } = null;
 
         public TarefaStatus Status { get; set; } = TarefaStatus.andamento;
-
-        [Required(ErrorMessage = "Usuario Id vazio")]
-        public int UsuarioId { get; set; }
     }
 }

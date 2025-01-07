@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_RESTful_para_Gestao_de_Estoque.core.requests.TarefaRequest
 {
-    public class DeleteTarefaRequest
+    public class DeleteTarefaRequest : Request
     {
         [Required]
         public int Id {get; set;}

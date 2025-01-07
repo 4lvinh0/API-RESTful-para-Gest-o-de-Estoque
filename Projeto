@@ -1,0 +1,39 @@
+Funcionalidades do Projeto:
+
+CRUD de Tarefas
+
+Create: Criar tarefas com informações como título, descrição, data de vencimento, status (pendente, em andamento, concluída).
+Read: Consultar tarefas de um usuário, com opção de filtrar por status, data de vencimento ou prioridade.
+Update: Atualizar informações das tarefas (ex.: marcar como concluída).
+Delete: Remover tarefas do sistema.
+Filtros e Paginação
+
+Adicionar filtros para buscar tarefas por status, data de criação ou vencimento.
+Paginação para listar tarefas com eficiência.
+Relatórios
+
+Endpoint que retorna:
+Número total de tarefas.
+Quantidade de tarefas por status.
+Tarefas atrasadas (com base na data de vencimento).
+Middlewares Personalizados
+
+Tratamento de erros com respostas consistentes (ex.: tarefa não encontrada, erro de autenticação).
+Middleware para logging de requisições e respostas.
+Configurações e Dependências
+
+Configuração centralizada no appsettings.json (ex.: connection strings, JWT secret key).
+Injeção de dependência para repositórios e serviços.
+Banco de Dados
+
+Use o Entity Framework Core para mapear as entidades:
+Usuário
+Tarefa
+Relacionamento entre Usuário (1:N) Tarefa.
+Documentação da API
+
+Use o Swagger para gerar documentação automática da API.
+Descreva endpoints, parâmetros e respostas.
+Testes Unitários
+
+Teste os serviços e repositórios usando xUnit.

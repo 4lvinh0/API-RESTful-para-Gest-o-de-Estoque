@@ -23,6 +23,5 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.requests.TarefaRequest
 
         public TarefaStatus Status { get; set; } = TarefaStatus.andamento;
 
-        public int UsuarioId { get; set; }
     }
 }
