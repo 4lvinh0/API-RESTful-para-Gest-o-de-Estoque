@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2d8iuTT9xwbuSecyOtuBjYlDJBiFAyuYzXTzXbtNiyCaUsA34xp+WotXPvHaaWQn7HEIsPbVgxa0RGz5Tw9ZcA==",
+  "dgSpecHash": "oHWkA+ZpPPb0rJl5O/jvE7LSPvCtwdcs9iVmp/bHaPyVykKR413kQJL3Lv1AqpsGwu+gahXIm5VeZPnHayp86g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\API-RESTful-para-Gestao-de-Estoque\\API-RESTful-para-Gestao-de-Estoque.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,8 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\7.2.0\\swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\7.2.0\\swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\7.2.0\\swashbuckle.aspnetcore.swaggerui.7.2.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",

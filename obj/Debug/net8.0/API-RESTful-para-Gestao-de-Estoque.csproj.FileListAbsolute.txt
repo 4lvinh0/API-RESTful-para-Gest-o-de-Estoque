@@ -165,3 +165,6 @@ C:\Users\Administrator\Desktop\API-RESTful-para-Gestao-de-Estoque\obj\Debug\net8
 C:\Users\Administrator\Desktop\API-RESTful-para-Gestao-de-Estoque\obj\Debug\net8.0\API-RESTful-para-Gestao-de-Estoque.pdb
 C:\Users\Administrator\Desktop\API-RESTful-para-Gestao-de-Estoque\obj\Debug\net8.0\API-RESTful-para-Gestao-de-Estoque.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\API-RESTful-para-Gestao-de-Estoque\obj\Debug\net8.0\ref\API-RESTful-para-Gestao-de-Estoque.dll
+C:\Users\Administrator\Desktop\API-RESTful-para-Gestao-de-Estoque\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Administrator\Desktop\API-RESTful-para-Gestao-de-Estoque\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Administrator\Desktop\API-RESTful-para-Gestao-de-Estoque\obj\Debug\net8.0\API-RESTful-para-Gestao-de-Estoque.MvcApplicationPartsAssemblyInfo.cs

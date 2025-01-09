@@ -1,5 +1,4 @@
 
-using API_RESTful_para_Gestao_de_Estoque.core.entities;
 using API_RESTful_para_Gestao_de_Estoque.core.handlers;
 using API_RESTful_para_Gestao_de_Estoque.infra;
 using Microsoft.EntityFrameworkCore;
@@ -12,15 +11,33 @@ builder.Services.AddDbContext<AppDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
 
 
+//Controllers
+builder.Services.AddControllers();
+
+
+//Swagger
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 //Injeção de Dependencia
 builder.Services.AddTransient<ITarefaHandler, TarefaHandler>();
 
 
+//---------------------------------------------------//
 var app = builder.Build();
 
+//Swagger
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
-app.MapGet("/", () => "Hello World!");
 
+//Swagger
+app.MapControllers();
+
+
+//App run
 app.Run();
