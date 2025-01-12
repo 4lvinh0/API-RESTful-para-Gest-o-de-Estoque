@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API-RESTful-para-Gestao-de-Estoque")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afd87d878c86b57f696e0231809c27b0f7ca302b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9879c0c4af089fe427ddc980e66f73f3939b64f")]
 [assembly: System.Reflection.AssemblyProductAttribute("API-RESTful-para-Gestao-de-Estoque")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API-RESTful-para-Gestao-de-Estoque")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

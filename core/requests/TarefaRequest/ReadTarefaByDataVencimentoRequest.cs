@@ -10,6 +10,6 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.requests.TarefaRequest
     {
         [Required]
         [DataType(DataType.Date)]
-        public DateOnly DataVencimento {get; set;}
+        public DateOnly? DataVencimento {get; set;}
     }
 }

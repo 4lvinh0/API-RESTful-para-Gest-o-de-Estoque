@@ -27,6 +27,9 @@ namespace API_RESTful_para_Gestao_de_Estoque.infra
             );
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+            => optionsBuilder.UseInMemoryDatabase("InMemoryDb");
+
 
         public DbSet<Tarefa> Tarefas { get; set; } = null!;
         public DbSet<Usuario> Usuarios { get; set; } = null!;

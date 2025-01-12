@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Banco de dados
 builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+    options => options.UseInMemoryDatabase("InMemoryDB"));
 
 
 //Controllers

@@ -40,27 +40,58 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.handlers
                     x.UsuarioId == request.UsuarioId
                 );
 
-            if(t is null) 
+            if (t is null)
                 return new Response<Tarefa>(null, "Tarefa não encontrada", 400);
 
             context.Tarefas.Remove(t);
+            await context.SaveChangesAsync();
+
             return new Response<Tarefa>(t, "Tarefa removida com sucesso", 200);
         }
 
-        public Task<Response<List<Tarefa>>> ReadTarefaByDataVencimentoAsync(ReadTarefaByDataVencimentoRequest request)
+        public async Task<Response<List<Tarefa>>> ReadTarefaByDataVencimentoAsync(ReadTarefaByDataVencimentoRequest request)
         {
-            throw new NotImplementedException();
+            List<Tarefa> t = await context
+                .Tarefas
+                .Where(x => x.DataVencimento == request.DataVencimento)
+                .OrderBy(x => x.DataVencimento)
+                .ToListAsync();
+
+
+            if (t is null)
+                return new Response<List<Tarefa>>(null, "Tarefa não encontra", 400);
+
+            return new Response<List<Tarefa>>(t, "Tarefa por Data de Vencimento", 200);
         }
 
-        public Task<Response<List<Tarefa>>> ReadTarefaByIdAsync(ReadTarefaByIdRequest request)
+        public async Task<Response<List<Tarefa>>> ReadTarefaByIdAsync(ReadTarefaByIdRequest request)
         {
-            throw new NotImplementedException();
+            List<Tarefa> t = await context
+                .Tarefas
+                .Where(x => x.Id == request.Id)
+                .OrderBy(x => x.Id)
+                .ToListAsync();
+
+
+            if (t is null)
+                return new Response<List<Tarefa>>(null, "Tarefa não encontra", 400);
+
+            return new Response<List<Tarefa>>(t, "Tarefa por Data de Vencimento", 200);
         }
 
-        public Task<Response<List<Tarefa>>> ReadTarefaByUsuarioRequest(ReadTarefaByUsuarioRequest request)
+        public async Task<Response<List<Tarefa>>> ReadTarefaByUsuarioRequest(ReadTarefaByUsuarioRequest request)
         {
-            throw new NotImplementedException();
-        }
+            List<Tarefa> t = await context
+                .Tarefas
+                .Where(x => x.UsuarioId == request.UserIdParaPesquisa)
+                .OrderBy( x => x.UsuarioId)
+                .ToListAsync();
+
+
+            if (t is null)
+                return new Response<List<Tarefa>>(null, "Tarefa não encontra", 400);
+
+            return new Response<List<Tarefa>>(t, "Tarefa por Data de Vencimento", 200);        }
 
         public async Task<Response<Tarefa>> UpdateTarefaAsync(UpdateTarefaRequest request)
         {
