@@ -51,14 +51,14 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.handlers
 
         public async Task<Response<List<Tarefa>>> ReadTarefaByDataVencimentoAsync(ReadTarefaByDataVencimentoRequest request)
         {
-            List<Tarefa> t = await context
+            var t = await context
                 .Tarefas
                 .Where(x => x.DataVencimento == request.DataVencimento)
                 .OrderBy(x => x.DataVencimento)
                 .ToListAsync();
 
 
-            if (t is null)
+            if (t.Count == 0)
                 return new Response<List<Tarefa>>(null, "Tarefa não encontra", 400);
 
             return new Response<List<Tarefa>>(t, "Tarefa por Data de Vencimento", 200);
@@ -66,14 +66,14 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.handlers
 
         public async Task<Response<List<Tarefa>>> ReadTarefaByIdAsync(ReadTarefaByIdRequest request)
         {
-            List<Tarefa> t = await context
+            var t = await context
                 .Tarefas
                 .Where(x => x.Id == request.Id)
                 .OrderBy(x => x.Id)
                 .ToListAsync();
 
 
-            if (t is null)
+            if (t.Count == 0)
                 return new Response<List<Tarefa>>(null, "Tarefa não encontra", 400);
 
             return new Response<List<Tarefa>>(t, "Tarefa por Data de Vencimento", 200);
@@ -81,14 +81,14 @@ namespace API_RESTful_para_Gestao_de_Estoque.core.handlers
 
         public async Task<Response<List<Tarefa>>> ReadTarefaByUsuarioRequest(ReadTarefaByUsuarioRequest request)
         {
-            List<Tarefa> t = await context
+            var t = await context
                 .Tarefas
                 .Where(x => x.UsuarioId == request.UserIdParaPesquisa)
                 .OrderBy( x => x.UsuarioId)
                 .ToListAsync();
 
 
-            if (t is null)
+            if (t.Count == 0)
                 return new Response<List<Tarefa>>(null, "Tarefa não encontra", 400);
 
             return new Response<List<Tarefa>>(t, "Tarefa por Data de Vencimento", 200);        }

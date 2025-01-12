@@ -34,6 +34,46 @@ namespace API_RESTful_para_Gestao_de_Estoque.app.Controllers
                 : TypedResults.BadRequest(response);
         }
 
+        [HttpGet("dataVencimento")]
+        public async Task<IResult> ReadTarefaByDataVencimentoAsync(DateOnly dataVencimento)
+        {
+            ReadTarefaByDataVencimentoRequest t = new ReadTarefaByDataVencimentoRequest();
+
+            t.DataVencimento = dataVencimento;
+
+            var response = await _ITarefaHandler.ReadTarefaByDataVencimentoAsync(t);
+
+            return response.IsSuccess
+                ? TypedResults.Ok(response)
+                : TypedResults.BadRequest(response);
+        }
+
+        [HttpGet("Id")]
+        public async Task<IResult> ReadTarefaByIdAsync(int Id)
+        {
+            ReadTarefaByIdRequest t = new ReadTarefaByIdRequest();
+            t.Id = Id;
+
+            var response = await _ITarefaHandler.ReadTarefaByIdAsync(t);
+
+            return response.IsSuccess
+                ? TypedResults.Ok(response)
+                : TypedResults.BadRequest(response);
+        }
+
+        [HttpGet("userId")]
+        public async Task<IResult> ReadTarefaByUsuarioRequest(int userId)
+        {
+            ReadTarefaByUsuarioRequest t = new ReadTarefaByUsuarioRequest();
+            t.UserIdParaPesquisa = userId;
+
+            var response = await _ITarefaHandler.ReadTarefaByUsuarioRequest(t);
+
+            return response.IsSuccess
+                ? TypedResults.Ok(response)
+                : TypedResults.BadRequest(response);
+        }
+
         [HttpPut]
         public async Task<IResult> UpdateTarefaAsync(UpdateTarefaRequest t)
         {
@@ -43,11 +83,6 @@ namespace API_RESTful_para_Gestao_de_Estoque.app.Controllers
                 ? TypedResults.Ok(response)
                 : TypedResults.BadRequest(response);
         }
-
-
-
-
-
 
     }
 }
